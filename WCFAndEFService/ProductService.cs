@@ -5,19 +5,18 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 
+
 namespace WCFAndEFService
 {
     public class ProductService : IProductService
     {
+        public bool DiscontinueProduct(int pId)
+        {
+            throw new NotImplementedException();
+        }
+
         public Products GetProductID(int id)
         {
-            //var product = new Product()
-            //{
-            //    ProductID = id,
-            //    ProductName = "IDK",
-            //    UnitPrice = (decimal)10.0,
-            //};            
-            //return product;
             Products product = null;
             using (var context = new NorthwindEntities1())
             {
@@ -34,6 +33,11 @@ namespace WCFAndEFService
                 }
             }
             return product;
+        }
+
+        public bool InsertNewProduct(Products p)
+        {
+            throw new NotImplementedException();
         }
 
         private Products TranslateProductEntityToProduct(Product productEntity)

@@ -6,8 +6,29 @@ namespace WCFAndEFService
     [ServiceContract]
     public interface IProductService
     {
+        /// <summary>
+        /// Get product by passing in productId
+        /// </summary>
+        /// <param name="d"></param>
+        /// <returns></returns>
         [OperationContract]
         Products GetProductID(int d);
+
+        /// <summary>
+        /// Insert new product in the DB
+        /// </summary>
+        /// <param name="p"></param>
+        /// <returns></returns>
+        [OperationContract]
+        bool InsertNewProduct(Products p);
+
+        /// <summary>
+        /// Discontinue an existing product from the DB
+        /// </summary>
+        /// <param name="pId"></param>
+        /// <returns></returns>
+        [OperationContract]
+        bool DiscontinueProduct(int pId);
     }
 
     [DataContract]
