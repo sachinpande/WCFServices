@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFAndEFService", "WCFAndEF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Contracts\Contracts.csproj", "{52685AFC-E356-497B-8DDF-401E9DFD2E78}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hosting", "Hosting", "{1C68E32E-2552-4DB9-83BC-B8A9FA7E9D0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleHost2", "ConsoleHost2\ConsoleHost2.csproj", "{CDD1A1F2-5718-4108-B9F9-E06CB96FB7EF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,8 +25,15 @@ Global
 		{52685AFC-E356-497B-8DDF-401E9DFD2E78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52685AFC-E356-497B-8DDF-401E9DFD2E78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52685AFC-E356-497B-8DDF-401E9DFD2E78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDD1A1F2-5718-4108-B9F9-E06CB96FB7EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDD1A1F2-5718-4108-B9F9-E06CB96FB7EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDD1A1F2-5718-4108-B9F9-E06CB96FB7EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDD1A1F2-5718-4108-B9F9-E06CB96FB7EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CDD1A1F2-5718-4108-B9F9-E06CB96FB7EF} = {1C68E32E-2552-4DB9-83BC-B8A9FA7E9D0A}
 	EndGlobalSection
 EndGlobal
