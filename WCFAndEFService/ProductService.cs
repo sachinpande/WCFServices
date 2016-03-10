@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Contracts;
+using System;
 using System.Linq;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.Text;
-
 
 namespace WCFAndEFService
 {
@@ -15,9 +11,9 @@ namespace WCFAndEFService
             throw new NotImplementedException();
         }
 
-        public Products GetProductID(int id)
+        public ProductsData GetProductID(int id)
         {
-            Products product = null;
+            ProductsData product = null;
             using (var context = new NorthwindEntities1())
             {
                 var productEntity = (from p in context.Products
@@ -35,14 +31,14 @@ namespace WCFAndEFService
             return product;
         }
 
-        public bool InsertNewProduct(Products p)
+        public bool InsertNewProduct(ProductsData p)
         {
             throw new NotImplementedException();
         }
 
-        private Products TranslateProductEntityToProduct(Product productEntity)
+        private ProductsData TranslateProductEntityToProduct(Product productEntity)
         {
-            Products p = new Products()
+            ProductsData p = new ProductsData()
             {
                 Discontinued = productEntity.Discontinued,
                 ProductID = productEntity.ProductID,

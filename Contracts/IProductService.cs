@@ -1,4 +1,5 @@
-﻿using System.Runtime.Serialization;
+﻿using Contracts;
+using System.Runtime.Serialization;
 using System.ServiceModel;
 
 namespace WCFAndEFService
@@ -12,7 +13,7 @@ namespace WCFAndEFService
         /// <param name="d"></param>
         /// <returns></returns>
         [OperationContract]
-        Products GetProductID(int d);
+        ProductsData GetProductID(int d);
 
         /// <summary>
         /// Insert new product in the DB
@@ -20,7 +21,7 @@ namespace WCFAndEFService
         /// <param name="p"></param>
         /// <returns></returns>
         [OperationContract]
-        bool InsertNewProduct(Products p);
+        bool InsertNewProduct(ProductsData p);
 
         /// <summary>
         /// Discontinue an existing product from the DB
@@ -31,23 +32,23 @@ namespace WCFAndEFService
         bool DiscontinueProduct(int pId);
     }
 
-    [DataContract]
-    public class Products
-    {
-        [DataMember]
-        public int ProductID { get; set; }
+    //[DataContract]
+    //public class Products
+    //{
+    //    [DataMember]
+    //    public int ProductID { get; set; }
 
-        [DataMember]
-        public string ProductName { get; set; }
+    //    [DataMember]
+    //    public string ProductName { get; set; }
 
-        [DataMember]
-        public string QuantityPerUnit { get; set; }
+    //    [DataMember]
+    //    public string QuantityPerUnit { get; set; }
 
-        [DataMember]
-        public decimal UnitPrice { get; set; }
+    //    [DataMember]
+    //    public decimal UnitPrice { get; set; }
 
-        [DataMember]
-        public bool Discontinued { get; set; }
+    //    [DataMember]
+    //    public bool Discontinued { get; set; }
 
-    }
+    //}
 }
